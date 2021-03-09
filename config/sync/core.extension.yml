@@ -10,6 +10,7 @@ module:
   devel: 0
   devel_generate: 0
   dynamic_page_cache: 0
+  elasticsearch_connector: 0
   field: 0
   field_ui: 0
   file: 0
@@ -20,6 +21,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  search_api: 0
   system: 0
   taxonomy: 0
   text: 0

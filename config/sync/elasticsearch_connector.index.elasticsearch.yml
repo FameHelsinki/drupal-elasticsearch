@@ -1,0 +1,9 @@
+uuid: 4eb2277f-ede8-40bc-bf60-7bb5a43c7413
+langcode: en
+status: true
+dependencies: {  }
+index_id: elasticsearch
+name: elasticsearch
+num_of_shards: 5
+num_of_replica: 1
+server: elasticsearch
