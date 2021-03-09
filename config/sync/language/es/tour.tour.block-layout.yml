@@ -1,9 +1,0 @@
-tips:
-  block-layout:
-    label: 'Diseño de bloque'
-  place-block:
-    label: 'Colocar Bloques.'
-  block-region:
-    label: 'Región de bloque'
-  configure-block:
-    label: 'Configurar bloque'
