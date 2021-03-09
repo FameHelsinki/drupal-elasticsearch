@@ -1,0 +1,21 @@
+label: 'Página inicio'
+description: 'Todo el contenido promovido a la página principal.'
+display:
+  default:
+    display_options:
+      empty:
+        title:
+          title: 'Bienvenido a [site:name]'
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      title: Inicio
+    display_title: Máster
+  feed_1:
+    display_title: 'Canal de noticias'
+  page_1:
+    display_title: Página
