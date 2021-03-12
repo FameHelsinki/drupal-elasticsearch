@@ -33,7 +33,22 @@
     "config": {
         "sort-packages": true
     },
+    "scripts": {
+        "post-install-cmd": [
+            "cp dist.phpunit.xml web/core/phpunit.xml"
+        ]
+    },
     "extra": {
+        "composer-exit-on-patch-failure": true,
+        "enable-patching": true,
+        "patches": {
+          "drupal/core": {
+            "https://www.drupal.org/project/drupal/issues/3182653": "https://www.drupal.org/files/issues/2021-03-05/3182653-23.patch"
+          }
+        },
+        "patchLevel": {
+          "drupal/core": "-p2"
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
@@ -67,27 +82,12 @@
             "web/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ]
-        },
-        "drupal-core-project-message": {
-            "include-keys": [
-                "homepage",
-                "support"
-            ],
-            "post-create-project-cmd-message": [
-                "<bg=blue;fg=white>                                                         </>",
-                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
-                "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
-                "<bg=blue;fg=white>                                                         </>",
-                "",
-                "<bg=yellow;fg=black>Next steps</>:",
-                "  * Install the site: https://www.drupal.org/docs/8/install",
-                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
-                "  * Get support: https://www.drupal.org/support",
-                "  * Get involved with the Drupal community:",
-                "      https://www.drupal.org/getting-involved",
-                "  * Remove the plugin that prints this message:",
-                "      composer remove drupal/core-project-message"
-            ]
         }
+    },
+    "require-dev": {
+        "drupal/core-dev": "^9.1",
+        "drupal/coder": "~8.3.12",
+        "mglaman/phpstan-drupal": "^0.12.8",
+        "phpspec/prophecy-phpunit": "^2"
     }
 }
