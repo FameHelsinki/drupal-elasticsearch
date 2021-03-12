@@ -1,0 +1,20 @@
+uuid: be8da316-79e8-46e2-b1db-95de086db06a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - seven
+id: seven_breadcrumbs
+theme: seven
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.0",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-project-message": "^9.1",
@@ -23,6 +24,7 @@
         "drupal/devel": "^4.1.1",
         "drupal/elasticsearch_connector": "7.0.0-alpha3",
         "drupal/search_api": "^1.19",
+        "drupal/search_api_solr": "^4.1",
         "drush/drush": "^10"
     },
     "conflict": {
@@ -44,6 +46,9 @@
         "patches": {
           "drupal/core": {
             "https://www.drupal.org/project/drupal/issues/3182653": "https://www.drupal.org/files/issues/2021-03-05/3182653-23.patch"
+          },
+          "drupal/elasticsearch_connector": {
+            "3153850 - getCluster error in getIndexName": "https://git.drupalcode.org/project/elasticsearch_connector/-/merge_requests/4.diff"
           }
         },
         "patchLevel": {
@@ -52,6 +57,20 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
+            },
+            "file-mapping": {
+                "[project-root]/.gitattributes": false,
+                "[project-root]/.editorconfig": false,
+                "[web-root]/example.gitignore": false,
+                "[web-root]/modules/README.txt": false,
+                "[web-root]/themes/README.txt": false,
+                "[web-root]/profiles/README.txt": false,
+                "[web-root]/sites/README.txt": false,
+                "[web-root]/.gitignore": false,
+                "[web-root]/sites/.gitignore": false,
+                "[web-root]/sites/default/default.settings.php": false,
+                "[web-root]/sites/development.services.yml": false,
+                "[web-root]/INSTALL.txt": false
             }
         },
         "installer-paths": {

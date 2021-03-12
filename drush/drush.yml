@@ -1,0 +1,11 @@
+#
+# A Drush configuration file
+#
+# Docs at https://github.com/drush-ops/drush/blob/master/examples/example.drush.yml
+#
+# Edit or remove this file as needed.
+drush:
+  paths:
+    alias-path:
+       - '${env.home}/.drush/sites'
+       - /etc/drush/sites

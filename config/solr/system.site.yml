@@ -1,0 +1,14 @@
+uuid: 1f69b26c-cb16-4bec-8941-e5a815387f66
+name: Drupal/Elasticsearch
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

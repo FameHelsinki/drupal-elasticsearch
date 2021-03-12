@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3da346ff485eed8478c6ea82f3fc0c29",
+    "content-hash": "91de6f80641839710840bf9e16c7b6ea",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -970,6 +970,54 @@
             },
             "abandoned": "psr/container",
             "time": "2017-02-14T19:40:03+00:00"
+        },
+        {
+            "name": "cweagans/composer-patches",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cweagans/composer-patches.git",
+                "reference": "ae02121445ad75f4eaff800cc532b5e6233e2ddf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/ae02121445ad75f4eaff800cc532b5e6233e2ddf",
+                "reference": "ae02121445ad75f4eaff800cc532b5e6233e2ddf",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "composer/composer": "~1.0 || ~2.0",
+                "phpunit/phpunit": "~4.6"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "cweagans\\Composer\\Patches"
+            },
+            "autoload": {
+                "psr-4": {
+                    "cweagans\\Composer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Cameron Eagans",
+                    "email": "me@cweagans.net"
+                }
+            ],
+            "description": "Provides a way to patch Composer packages.",
+            "support": {
+                "issues": "https://github.com/cweagans/composer-patches/issues",
+                "source": "https://github.com/cweagans/composer-patches/tree/1.7.0"
+            },
+            "time": "2020-09-30T17:56:20+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -2585,6 +2633,106 @@
             }
         },
         {
+            "name": "drupal/search_api_solr",
+            "version": "4.1.11",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/search_api_solr.git",
+                "reference": "4.1.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/search_api_solr-4.1.11.zip",
+                "reference": "4.1.11",
+                "shasum": "aa8b4cdb8255439e6808de7f5694f6a8a0ccdaac"
+            },
+            "require": {
+                "consolidation/annotated-command": "^2.12|^4.1",
+                "drupal/core": "^8.8 || ^9",
+                "drupal/search_api": "~1.17",
+                "ext-dom": "*",
+                "ext-json": "*",
+                "ext-simplexml": "*",
+                "laminas/laminas-stdlib": "^3.2",
+                "maennchen/zipstream-php": "^1.2|^2.0",
+                "php": "^7.2|^8.0",
+                "solarium/solarium": "^6.0.4|^6.1.0"
+            },
+            "conflict": {
+                "drupal/acquia_search_solr": "<1.0.0-beta8",
+                "drupal/search_api_solr_multilingual": "<3.0.0"
+            },
+            "require-dev": {
+                "drupal/devel": "^4.0",
+                "drupal/facets": "1.x-dev",
+                "drupal/geofield": "1.x-dev",
+                "drupal/search_api_autocomplete": "1.x-dev",
+                "drupal/search_api_location": "1.x-dev",
+                "drupal/search_api_spellcheck": "3.x-dev",
+                "monolog/monolog": "^1.25",
+                "phayes/geophp": "^1.2"
+            },
+            "suggest": {
+                "drupal/facets": "Provides facetted search.",
+                "drupal/search_api_autocomplete": "Provides auto complete for search boxes.",
+                "drupal/search_api_location": "Provides location searches.",
+                "drupal/search_api_spellcheck": "Provides spell checking and 'Did You Mean?'."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.1.11",
+                    "datestamp": "1612532147",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Markus Kalkbrenner",
+                    "homepage": "https://www.drupal.org/u/mkalkbrenner"
+                },
+                {
+                    "name": "Other contributors",
+                    "homepage": "https://www.drupal.org/node/982682/committers"
+                },
+                {
+                    "name": "amateescu",
+                    "homepage": "https://www.drupal.org/user/729614"
+                },
+                {
+                    "name": "cspitzlay",
+                    "homepage": "https://www.drupal.org/user/419305"
+                },
+                {
+                    "name": "drunken monkey",
+                    "homepage": "https://www.drupal.org/user/205582"
+                },
+                {
+                    "name": "mkalkbrenner",
+                    "homepage": "https://www.drupal.org/user/124705"
+                }
+            ],
+            "description": "Offers an implementation of the Search API that uses an Apache Solr server for indexing content.",
+            "homepage": "https://www.drupal.org/project/search_api_solr",
+            "support": {
+                "source": "http://git.drupal.org/project/search_api_solr.git",
+                "issues": "https://www.drupal.org/project/issues/search_api_solr",
+                "chat": "https://drupalchat.me/channel/search"
+            }
+        },
+        {
             "name": "drush/drush",
             "version": "10.3.6",
             "source": {
@@ -3711,6 +3859,77 @@
             "time": "2021-02-22T09:20:06+00:00"
         },
         {
+            "name": "maennchen/zipstream-php",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maennchen/ZipStream-PHP.git",
+                "reference": "c4c5803cc1f93df3d2448478ef79394a5981cc58"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maennchen/ZipStream-PHP/zipball/c4c5803cc1f93df3d2448478ef79394a5981cc58",
+                "reference": "c4c5803cc1f93df3d2448478ef79394a5981cc58",
+                "shasum": ""
+            },
+            "require": {
+                "myclabs/php-enum": "^1.5",
+                "php": ">= 7.1",
+                "psr/http-message": "^1.0",
+                "symfony/polyfill-mbstring": "^1.0"
+            },
+            "require-dev": {
+                "ext-zip": "*",
+                "guzzlehttp/guzzle": ">= 6.3",
+                "mikey179/vfsstream": "^1.6",
+                "phpunit/phpunit": ">= 7.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ZipStream\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Duncan",
+                    "email": "pabs@pablotron.org"
+                },
+                {
+                    "name": "Jonatan Männchen",
+                    "email": "jonatan@maennchen.ch"
+                },
+                {
+                    "name": "Jesse Donat",
+                    "email": "donatj@gmail.com"
+                },
+                {
+                    "name": "András Kolesár",
+                    "email": "kolesar@kolesar.hu"
+                }
+            ],
+            "description": "ZipStream is a library for dynamically streaming dynamic zip files from PHP without writing to the disk at all on the server.",
+            "keywords": [
+                "stream",
+                "zip"
+            ],
+            "support": {
+                "issues": "https://github.com/maennchen/ZipStream-PHP/issues",
+                "source": "https://github.com/maennchen/ZipStream-PHP/tree/master"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/zipstream",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2020-05-30T13:11:16+00:00"
+        },
+        {
             "name": "makinacorpus/php-lucene",
             "version": "1.0.2",
             "source": {
@@ -3826,6 +4045,66 @@
                 "source": "https://github.com/Masterminds/html5-php/tree/2.7.4"
             },
             "time": "2020-10-01T13:52:52+00:00"
+        },
+        {
+            "name": "myclabs/php-enum",
+            "version": "1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/myclabs/php-enum.git",
+                "reference": "46cf3d8498b095bd33727b13fd5707263af99421"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/myclabs/php-enum/zipball/46cf3d8498b095bd33727b13fd5707263af99421",
+                "reference": "46cf3d8498b095bd33727b13fd5707263af99421",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.3 || ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "1.*",
+                "vimeo/psalm": "^4.5.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MyCLabs\\Enum\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP Enum contributors",
+                    "homepage": "https://github.com/myclabs/php-enum/graphs/contributors"
+                }
+            ],
+            "description": "PHP Enum implementation",
+            "homepage": "http://github.com/myclabs/php-enum",
+            "keywords": [
+                "enum"
+            ],
+            "support": {
+                "issues": "https://github.com/myclabs/php-enum/issues",
+                "source": "https://github.com/myclabs/php-enum/tree/1.8.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/mnapoli",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/myclabs/php-enum",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-02-15T16:11:48+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -4289,6 +4568,108 @@
             "time": "2017-02-14T16:28:37+00:00"
         },
         {
+            "name": "psr/event-dispatcher",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/event-dispatcher.git",
+                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/event-dispatcher/zipball/dbefd12671e8a14ec7f180cab83036ed26714bb0",
+                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\EventDispatcher\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Standard interfaces for event handling.",
+            "keywords": [
+                "events",
+                "psr",
+                "psr-14"
+            ],
+            "support": {
+                "issues": "https://github.com/php-fig/event-dispatcher/issues",
+                "source": "https://github.com/php-fig/event-dispatcher/tree/1.0.0"
+            },
+            "time": "2019-01-08T18:20:26+00:00"
+        },
+        {
+            "name": "psr/http-client",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-client.git",
+                "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-client/zipball/2dfb5f6c5eff0e91e20e913f8c5452ed95b86621",
+                "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0 || ^8.0",
+                "psr/http-message": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP clients",
+            "homepage": "https://github.com/php-fig/http-client",
+            "keywords": [
+                "http",
+                "http-client",
+                "psr",
+                "psr-18"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-client/tree/master"
+            },
+            "time": "2020-06-29T06:28:15+00:00"
+        },
+        {
             "name": "psr/http-factory",
             "version": "1.0.1",
             "source": {
@@ -4683,6 +5064,69 @@
                 "source": "https://github.com/ruflin/Elastica/tree/master"
             },
             "time": "2021-03-09T08:52:40+00:00"
+        },
+        {
+            "name": "solarium/solarium",
+            "version": "6.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/solariumphp/solarium.git",
+                "reference": "a161014dea4799c46adeb542d0a25ec334dcccc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/a161014dea4799c46adeb542d0a25ec334dcccc2",
+                "reference": "a161014dea4799c46adeb542d0a25ec334dcccc2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.3 || ^8.0",
+                "psr/event-dispatcher": "^1.0",
+                "psr/http-client": "^1.0",
+                "psr/http-factory": "^1.0",
+                "symfony/event-dispatcher-contracts": "^1.0 || ^2.0"
+            },
+            "require-dev": {
+                "escapestudios/symfony2-coding-standard": "^3.11",
+                "guzzlehttp/guzzle": "^7.2",
+                "nyholm/psr7": "^1.2",
+                "php-http/guzzle7-adapter": "^0.1",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan-phpunit": "^0.12",
+                "phpunit/phpunit": "^8.5 || ^9.4",
+                "roave/security-advisories": "dev-master",
+                "symfony/event-dispatcher": "^4.3 || ^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Solarium\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "See GitHub contributors",
+                    "homepage": "https://github.com/solariumphp/solarium/contributors"
+                }
+            ],
+            "description": "PHP Solr client",
+            "homepage": "http://www.solarium-project.org",
+            "keywords": [
+                "php",
+                "search",
+                "solr"
+            ],
+            "support": {
+                "issues": "https://github.com/solariumphp/solarium/issues",
+                "source": "https://github.com/solariumphp/solarium/tree/6.1.1"
+            },
+            "time": "2021-02-05T13:03:56+00:00"
         },
         {
             "name": "stack/builder",
@@ -8555,32 +8999,33 @@
         },
         {
             "name": "mglaman/phpstan-drupal",
-            "version": "0.12.8",
+            "version": "0.12.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mglaman/phpstan-drupal.git",
-                "reference": "7598084f8a0d6de21015faa9e2151cc4540f4344"
+                "reference": "f2e1446663fe38a12b1270d35bc332d8806f9f75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mglaman/phpstan-drupal/zipball/7598084f8a0d6de21015faa9e2151cc4540f4344",
-                "reference": "7598084f8a0d6de21015faa9e2151cc4540f4344",
+                "url": "https://api.github.com/repos/mglaman/phpstan-drupal/zipball/f2e1446663fe38a12b1270d35bc332d8806f9f75",
+                "reference": "f2e1446663fe38a12b1270d35bc332d8806f9f75",
                 "shasum": ""
             },
             "require": {
                 "nette/finder": "^2.5",
-                "php": "^7.1",
+                "php": "^7.1 || ^8.0",
                 "phpstan/phpstan": "^0.12.64",
                 "symfony/yaml": "~3.4.5|^4.2",
                 "webflo/drupal-finder": "^1.2"
             },
             "require-dev": {
-                "composer/installers": "^1.6",
-                "drupal/core-recommended": "^8.8@alpha",
-                "drush/drush": "^9.6",
+                "composer/installers": "^1.9",
+                "drupal/core-dev": "^8.8@alpha || ^9.0",
+                "drupal/core-recommended": "^8.8@alpha || ^9.0",
+                "drush/drush": "^9.6 | ^10.0",
                 "phpstan/phpstan-deprecation-rules": "~0.12.0",
                 "phpstan/phpstan-strict-rules": "^0.12.0",
-                "phpunit/phpunit": "^7.5",
+                "phpunit/phpunit": "^6.5 || ^7.5 || ^8.0 || ^9",
                 "squizlabs/php_codesniffer": "^3.3"
             },
             "suggest": {
@@ -8615,6 +9060,9 @@
                 }
             },
             "autoload": {
+                "files": [
+                    "drupal-phpunit-hack.php"
+                ],
                 "psr-4": {
                     "PHPStan\\": "src/"
                 }
@@ -8632,7 +9080,7 @@
             "description": "Drupal extension and rules for PHPStan",
             "support": {
                 "issues": "https://github.com/mglaman/phpstan-drupal/issues",
-                "source": "https://github.com/mglaman/phpstan-drupal/tree/0.12.8"
+                "source": "https://github.com/mglaman/phpstan-drupal/tree/0.12.9"
             },
             "funding": [
                 {
@@ -8640,15 +9088,15 @@
                     "type": "github"
                 },
                 {
-                    "url": "https://ko-fi.com/mglaman",
-                    "type": "ko_fi"
+                    "url": "https://opencollective.com/phpstan-drupal",
+                    "type": "open_collective"
                 },
                 {
                     "url": "https://tidelift.com/funding/github/packagist/mglaman/phpstan-drupal",
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-05T01:40:26+00:00"
+            "time": "2021-03-11T00:17:32+00:00"
         },
         {
             "name": "mikey179/vfsstream",

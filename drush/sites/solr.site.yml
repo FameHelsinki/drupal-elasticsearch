@@ -1,0 +1,17 @@
+# Edit or remove this file as needed.
+# Docs at https://github.com/drush-ops/drush/blob/master/examples/example.site.yml
+
+#prod:
+#  host: prod.domain.com
+#  user: www-admin
+#  root: /path/to/drupal
+#  uri: http://www.example.com
+#
+#stage:
+#  host: stage.domain.com
+#  user: www-admin
+#  root: /path/to/drupal
+#  uri: http://stage.example.com
+ddev:
+  uri: https://drupal-elasticsearch-solr.ddev.site
+  root: /var/www/html/web/sites/solr
