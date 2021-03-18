@@ -5,12 +5,14 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.date
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
     - image.style.thumbnail
     - node.type.article
   module:
     - comment
+    - datetime
     - image
     - path
     - text
@@ -41,6 +43,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  date:
+    weight: 121
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_image:
     type: image_image
     weight: 4

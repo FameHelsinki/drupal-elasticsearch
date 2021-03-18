@@ -2,16 +2,25 @@ uuid: 73666bff-d5d4-4f89-877e-1fcf791a1371
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.node.date
+    - search_api.server.elasticsearch_server
   module:
     - node
     - search_api
-  config:
-    - search_api.server.elasticsearch_server
 id: elasticsearch
 name: elasticsearch
 description: ''
 read_only: false
 field_settings:
+  date:
+    label: Date
+    datasource_id: 'entity:node'
+    property_path: date
+    type: full_date
+    dependencies:
+      config:
+        - field.storage.node.date
   title:
     label: Title
     datasource_id: 'entity:node'

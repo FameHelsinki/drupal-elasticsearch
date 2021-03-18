@@ -48,7 +48,8 @@
             "https://www.drupal.org/project/drupal/issues/3182653": "https://www.drupal.org/files/issues/2021-03-05/3182653-23.patch"
           },
           "drupal/elasticsearch_connector": {
-            "3153850 - getCluster error in getIndexName": "https://git.drupalcode.org/project/elasticsearch_connector/-/merge_requests/4.diff"
+            "3153850 - getCluster error in getIndexName": "https://git.drupalcode.org/project/elasticsearch_connector/-/merge_requests/4.diff",
+            "3189051 - Handle pre-epoch dates": "https://www.drupal.org/files/issues/2021-03-18/3189051-4.patch"
           }
         },
         "patchLevel": {
