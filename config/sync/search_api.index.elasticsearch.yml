@@ -2,16 +2,26 @@ uuid: 73666bff-d5d4-4f89-877e-1fcf791a1371
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.node.geolocation
+    - search_api.server.elasticsearch_server
   module:
+    - search_api_location
     - node
     - search_api
-  config:
-    - search_api.server.elasticsearch_server
 id: elasticsearch
 name: elasticsearch
 description: ''
 read_only: false
 field_settings:
+  geolocation:
+    label: Geolocation
+    datasource_id: 'entity:node'
+    property_path: geolocation
+    type: location
+    dependencies:
+      config:
+        - field.storage.node.geolocation
   title:
     label: Title
     datasource_id: 'entity:node'

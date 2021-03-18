@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
+    - field.field.node.article.geolocation
     - image.style.thumbnail
     - node.type.article
   module:
@@ -46,4 +47,5 @@ content:
 hidden:
   comment: true
   field_tags: true
+  geolocation: true
   search_api_excerpt: true

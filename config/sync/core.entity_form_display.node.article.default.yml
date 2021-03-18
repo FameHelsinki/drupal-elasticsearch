@@ -7,10 +7,12 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
+    - field.field.node.article.geolocation
     - image.style.thumbnail
     - node.type.article
   module:
     - comment
+    - geolocation
     - image
     - path
     - text
@@ -59,6 +61,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  geolocation:
+    weight: 121
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_latlng
+    region: content
   path:
     type: path
     weight: 30

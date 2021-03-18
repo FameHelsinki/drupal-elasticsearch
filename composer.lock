@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "91de6f80641839710840bf9e16c7b6ea",
+    "content-hash": "1ff917545685d577ccd169abfea6ce2f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2561,6 +2561,72 @@
             }
         },
         {
+            "name": "drupal/geolocation",
+            "version": "3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/geolocation.git",
+                "reference": "8.x-3.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/geolocation-8.x-3.2.zip",
+                "reference": "8.x-3.2",
+                "shasum": "ed6b1e594dd0ad95e52681130a8bcae85d68c305"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9",
+                "gasparesganga/php-shapefile": ">=3.2",
+                "sibyx/phpgpx": "^1.0"
+            },
+            "require-dev": {
+                "drupal/address": "*",
+                "drupal/geofield": "*",
+                "drupal/geolocation_demo": "*",
+                "drupal/geolocation_geometry": "*",
+                "drupal/geolocation_geometry_data": "*",
+                "drupal/geolocation_geometry_natural_earth_countries": "*",
+                "drupal/geolocation_google_maps": "*",
+                "drupal/geolocation_google_maps_demo": "*",
+                "drupal/geolocation_google_static_maps": "*",
+                "drupal/geolocation_leaflet": "*",
+                "drupal/search_api": "*",
+                "drupal/search_api_location": "*",
+                "drupal/search_api_location_views": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.2",
+                    "datestamp": "1590319155",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "derjochenmeyer",
+                    "homepage": "https://www.drupal.org/u/derjochenmeyer"
+                },
+                {
+                    "name": "cadamski",
+                    "homepage": "https://www.drupal.org/u/cadamski"
+                }
+            ],
+            "description": "Provides a simple geolocation Drupal field type to store and display location data (lat, lng).",
+            "homepage": "https://www.drupal.org/project/geolocation",
+            "support": {
+                "source": "http://git.drupal.org/project/geolocation.git",
+                "issues": "https://www.drupal.org/project/issues/geolocation"
+            }
+        },
+        {
             "name": "drupal/search_api",
             "version": "1.19.0",
             "source": {
@@ -2629,6 +2695,75 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/search_api",
                 "issues": "https://www.drupal.org/project/issues/search_api",
+                "irc": "irc://irc.freenode.org/drupal-search-api"
+            }
+        },
+        {
+            "name": "drupal/search_api_location",
+            "version": "1.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/search_api_location.git",
+                "reference": "8.x-1.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/search_api_location-8.x-1.0-alpha2.zip",
+                "reference": "8.x-1.0-alpha2",
+                "shasum": "6524e854039d6557538b239aa2a06af1e4c7a6d0"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9",
+                "drupal/search_api": "*",
+                "phayes/geophp": "^1.2"
+            },
+            "require-dev": {
+                "drupal/facets": "*",
+                "drupal/geocoder": "*",
+                "drupal/search_api": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-alpha2",
+                    "datestamp": "1602614413",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mattias Michaux",
+                    "homepage": "https://www.drupal.org/u/mollux"
+                },
+                {
+                    "name": "borisson_",
+                    "homepage": "https://www.drupal.org/user/2393360"
+                },
+                {
+                    "name": "drunken monkey",
+                    "homepage": "https://www.drupal.org/user/205582"
+                },
+                {
+                    "name": "mollux",
+                    "homepage": "https://www.drupal.org/user/785804"
+                },
+                {
+                    "name": "ygerasimov",
+                    "homepage": "https://www.drupal.org/user/257311"
+                }
+            ],
+            "description": "Provides location based search for the Search API module.",
+            "homepage": "https://www.drupal.org/project/search_api_location",
+            "support": {
+                "source": "http://git.drupal.org/project/search_api_location.git",
+                "issues": "https://www.drupal.org/project/issues/search_api_location",
                 "irc": "irc://irc.freenode.org/drupal-search-api"
             }
         },
@@ -3109,6 +3244,58 @@
                 "source": "https://github.com/ezimuel/ringphp/tree/1.1.2"
             },
             "time": "2020-02-14T23:51:21+00:00"
+        },
+        {
+            "name": "gasparesganga/php-shapefile",
+            "version": "v3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gasparesganga/php-shapefile.git",
+                "reference": "3c7e4cb80edb40ff184e3971458577a04845f8da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gasparesganga/php-shapefile/zipball/3c7e4cb80edb40ff184e3971458577a04845f8da",
+                "reference": "3c7e4cb80edb40ff184e3971458577a04845f8da",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Shapefile\\": "src/Shapefile/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gaspare Sganga",
+                    "email": "contact@gasparesganga.com",
+                    "homepage": "https://gasparesganga.com/labs/php-shapefile/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP library to read and write ESRI Shapefiles, compatible with WKT and GeoJSON",
+            "homepage": "https://gasparesganga.com/labs/php-shapefile/",
+            "keywords": [
+                "ESRI",
+                "Shapefile",
+                "dbf",
+                "geojson",
+                "shape",
+                "shp",
+                "wkt"
+            ],
+            "support": {
+                "issues": "https://github.com/gasparesganga/php-shapefile/issues",
+                "source": "https://github.com/gasparesganga/php-shapefile/tree/v3.4.0"
+            },
+            "time": "2021-01-23T08:10:45+00:00"
         },
         {
             "name": "grasmash/expander",
@@ -4515,6 +4702,46 @@
             "time": "2019-12-10T10:24:42+00:00"
         },
         {
+            "name": "phayes/geophp",
+            "version": "1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phayes/geoPHP.git",
+                "reference": "015404e85b602e0df1f91441f8db0f9e98f7e567"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phayes/geoPHP/zipball/015404e85b602e0df1f91441f8db0f9e98f7e567",
+                "reference": "015404e85b602e0df1f91441f8db0f9e98f7e567",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "geoPHP.inc"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2 or New-BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Patrick Hayes"
+                }
+            ],
+            "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
+            "homepage": "https://github.com/phayes/geoPHP",
+            "support": {
+                "issues": "https://github.com/phayes/geoPHP/issues",
+                "source": "https://github.com/phayes/geoPHP/tree/master"
+            },
+            "time": "2014-12-02T06:11:22+00:00"
+        },
+        {
             "name": "psr/container",
             "version": "1.0.0",
             "source": {
@@ -4829,16 +5056,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.10.6",
+            "version": "v0.10.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "6f990c19f91729de8b31e639d6e204ea59f19cf3"
+                "reference": "a395af46999a12006213c0c8346c9445eb31640c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/6f990c19f91729de8b31e639d6e204ea59f19cf3",
-                "reference": "6f990c19f91729de8b31e639d6e204ea59f19cf3",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/a395af46999a12006213c0c8346c9445eb31640c",
+                "reference": "a395af46999a12006213c0c8346c9445eb31640c",
                 "shasum": ""
             },
             "require": {
@@ -4899,9 +5126,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.10.6"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.10.7"
             },
-            "time": "2021-01-18T15:53:43+00:00"
+            "time": "2021-03-14T02:14:56+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -5003,12 +5230,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ruflin/Elastica.git",
-                "reference": "d8334237e0a0a138d00d0ae1c8a9a779ccfc759a"
+                "reference": "91356a2b2e998615ecb69b7a2c6ed3205cef1de0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ruflin/Elastica/zipball/d8334237e0a0a138d00d0ae1c8a9a779ccfc759a",
-                "reference": "d8334237e0a0a138d00d0ae1c8a9a779ccfc759a",
+                "url": "https://api.github.com/repos/ruflin/Elastica/zipball/91356a2b2e998615ecb69b7a2c6ed3205cef1de0",
+                "reference": "91356a2b2e998615ecb69b7a2c6ed3205cef1de0",
                 "shasum": ""
             },
             "require": {
@@ -5063,7 +5290,56 @@
                 "issues": "https://github.com/ruflin/Elastica/issues",
                 "source": "https://github.com/ruflin/Elastica/tree/master"
             },
-            "time": "2021-03-09T08:52:40+00:00"
+            "time": "2021-03-18T12:51:26+00:00"
+        },
+        {
+            "name": "sibyx/phpgpx",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sibyx/phpGPX.git",
+                "reference": "e8841db16e751a8968a8c0cdc48100cd74407c3d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sibyx/phpGPX/zipball/e8841db16e751a8968a8c0cdc48100cd74407c3d",
+                "reference": "e8841db16e751a8968a8c0cdc48100cd74407c3d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-simplexml": "*",
+                "lib-libxml": "*",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "evert/phpdoc-md": "~0.2.0",
+                "friendsofphp/php-cs-fixer": "^2.18",
+                "phpunit/phpunit": "^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "phpGPX\\": "src/phpGPX/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jakub Dubec",
+                    "email": "jakub.dubec@gmail.com",
+                    "homepage": "https://jakubdubec.me"
+                }
+            ],
+            "description": "A simple PHP library for GPX import/export",
+            "support": {
+                "issues": "https://github.com/Sibyx/phpGPX/issues",
+                "source": "https://github.com/Sibyx/phpGPX/tree/1.1.2"
+            },
+            "time": "2021-02-28T19:29:40+00:00"
         },
         {
             "name": "solarium/solarium",
@@ -9630,16 +9906,16 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.12.2",
+            "version": "1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "245710e971a030f42e08f4912863805570f23d39"
+                "reference": "be1996ed8adc35c3fd795488a653f4b518be70ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/245710e971a030f42e08f4912863805570f23d39",
-                "reference": "245710e971a030f42e08f4912863805570f23d39",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/be1996ed8adc35c3fd795488a653f4b518be70ea",
+                "reference": "be1996ed8adc35c3fd795488a653f4b518be70ea",
                 "shasum": ""
             },
             "require": {
@@ -9691,9 +9967,9 @@
             ],
             "support": {
                 "issues": "https://github.com/phpspec/prophecy/issues",
-                "source": "https://github.com/phpspec/prophecy/tree/1.12.2"
+                "source": "https://github.com/phpspec/prophecy/tree/1.13.0"
             },
-            "time": "2020-12-19T10:15:11+00:00"
+            "time": "2021-03-17T13:42:18+00:00"
         },
         {
             "name": "phpspec/prophecy-phpunit",
@@ -10127,16 +10403,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.2",
+            "version": "9.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "f661659747f2f87f9e72095bb207bceb0f151cb4"
+                "reference": "27241ac75fc37ecf862b6e002bf713b6566cbe41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f661659747f2f87f9e72095bb207bceb0f151cb4",
-                "reference": "f661659747f2f87f9e72095bb207bceb0f151cb4",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/27241ac75fc37ecf862b6e002bf713b6566cbe41",
+                "reference": "27241ac75fc37ecf862b6e002bf713b6566cbe41",
                 "shasum": ""
             },
             "require": {
@@ -10214,7 +10490,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.2"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.3"
             },
             "funding": [
                 {
@@ -10226,7 +10502,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-02-02T14:45:58+00:00"
+            "time": "2021-03-17T07:30:34+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -11305,16 +11581,16 @@
         },
         {
             "name": "sirbrillig/phpcs-variable-analysis",
-            "version": "v2.10.2",
+            "version": "v2.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirbrillig/phpcs-variable-analysis.git",
-                "reference": "0775e0c683badad52c03b11c2cd86a9fdecb937a"
+                "reference": "e76e816236f401458dd8e16beecab905861b5867"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirbrillig/phpcs-variable-analysis/zipball/0775e0c683badad52c03b11c2cd86a9fdecb937a",
-                "reference": "0775e0c683badad52c03b11c2cd86a9fdecb937a",
+                "url": "https://api.github.com/repos/sirbrillig/phpcs-variable-analysis/zipball/e76e816236f401458dd8e16beecab905861b5867",
+                "reference": "e76e816236f401458dd8e16beecab905861b5867",
                 "shasum": ""
             },
             "require": {
@@ -11354,7 +11630,7 @@
                 "source": "https://github.com/sirbrillig/phpcs-variable-analysis",
                 "wiki": "https://github.com/sirbrillig/phpcs-variable-analysis/wiki"
             },
-            "time": "2021-01-08T16:31:05+00:00"
+            "time": "2021-03-09T22:32:14+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",

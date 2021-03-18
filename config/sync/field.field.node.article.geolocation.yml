@@ -1,0 +1,28 @@
+uuid: 4b03777e-0020-44b8-95e1-aebbffc1f3b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.geolocation
+    - node.type.article
+  module:
+    - geolocation
+id: node.article.geolocation
+field_name: geolocation
+entity_type: node
+bundle: article
+label: Geolocation
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    lat_sin: '0.78237765806837'
+    lat_cos: '0.62280430325701'
+    lng_rad: '0.00018634880423543'
+    value: '51.47879, 0.010677'
+    lat: '51.47879'
+    lng: '0.010677'
+default_value_callback: ''
+settings: {  }
+field_type: geolocation
