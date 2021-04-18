@@ -7,7 +7,6 @@ module:
   comment: 0
   config: 0
   dblog: 0
-  demo_content: 0
   devel: 0
   devel_generate: 0
   dynamic_page_cache: 0
