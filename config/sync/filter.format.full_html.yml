@@ -1,0 +1,25 @@
+uuid: bff4832a-888d-42cc-a497-c20a446b87a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+name: 'Full html'
+format: full_html
+weight: 0
+filters:
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }
