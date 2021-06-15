@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.search_result
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.field_date_founded
     - field.field.node.article.field_image
     - field.field.node.article.field_link
     - field.field.node.article.field_location
@@ -48,6 +49,7 @@ content:
     region: content
 hidden:
   comment: true
+  field_date_founded: true
   field_link: true
   field_location: true
   field_media: true

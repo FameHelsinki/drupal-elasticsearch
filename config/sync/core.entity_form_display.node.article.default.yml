@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.field_date_founded
     - field.field.node.article.field_image
     - field.field.node.article.field_link
     - field.field.node.article.field_location
@@ -14,6 +15,7 @@ dependencies:
     - node.type.article
   module:
     - comment
+    - datetime
     - geolocation
     - image
     - link
@@ -47,6 +49,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_date_founded:
+    weight: 124
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_image:
     type: image_image
     weight: 4
