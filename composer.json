@@ -18,13 +18,14 @@
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.0",
-        "drupal/core-composer-scaffold": "^9.1",
-        "drupal/core-project-message": "^9.1",
-        "drupal/core-recommended": "^9.1",
+        "drupal/core-composer-scaffold": "^9.2",
+        "drupal/core-project-message": "^9.2",
+        "drupal/core-recommended": "^9.2",
         "drupal/devel": "^4.1.1",
         "drupal/elasticsearch_connector": "7.0.0-alpha3",
         "drupal/search_api": "^1.19",
         "drupal/search_api_solr": "^4.1",
+        "drupal/token": "^1.9",
         "drush/drush": "^10"
     },
     "conflict": {
@@ -44,9 +45,6 @@
         "composer-exit-on-patch-failure": true,
         "enable-patching": true,
         "patches": {
-          "drupal/core": {
-            "https://www.drupal.org/project/drupal/issues/3182653": "https://www.drupal.org/files/issues/2021-03-05/3182653-23.patch"
-          },
           "drupal/elasticsearch_connector": {
             "3153850 - getCluster error in getIndexName": "https://git.drupalcode.org/project/elasticsearch_connector/-/merge_requests/4.diff"
           }
@@ -104,7 +102,7 @@
         }
     },
     "require-dev": {
-        "drupal/core-dev": "^9.1",
+        "drupal/core-dev": "^9.2",
         "drupal/coder": "~8.3.12",
         "mglaman/phpstan-drupal": "^0.12.8",
         "phpspec/prophecy-phpunit": "^2"
