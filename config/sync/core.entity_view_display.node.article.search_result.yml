@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_link
+    - field.field.node.article.field_location
     - field.field.node.article.field_media
     - field.field.node.article.field_tags
     - image.style.thumbnail
@@ -48,6 +49,7 @@ content:
 hidden:
   comment: true
   field_link: true
+  field_location: true
   field_media: true
   field_tags: true
   langcode: true
