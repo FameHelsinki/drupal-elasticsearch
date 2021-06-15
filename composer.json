@@ -48,6 +48,7 @@
         "enable-patching": true,
         "patches": {
           "drupal/elasticsearch_connector": {
+            "3189051 - Handle pre-epoch dates": "https://www.drupal.org/files/issues/2021-06-11/3189051-pre-epoch-dates-8.patch",
             "3116153 - Add support for geofield mapping": "https://www.drupal.org/files/issues/2020-11-17/elasticsearch_connector-support_geofield-3116153-3.patch",
             "3153850 - getCluster error in getIndexName": "https://git.drupalcode.org/project/elasticsearch_connector/-/merge_requests/4.diff"
           }
