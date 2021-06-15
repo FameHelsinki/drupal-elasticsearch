@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Creating demo content for testing/developing purposes.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function demo_content_install() {
+  demo_content_generate();
+}
