@@ -1,3 +1,4 @@
+uuid: 259fd8ee-c077-4ce6-b88d-bbe4dadea077
 langcode: en
 status: true
 dependencies:
@@ -6,8 +7,6 @@ dependencies:
 name: 'Full HTML'
 format: full_html
 weight: 2
-roles:
-  - administrator
 filters:
   filter_align:
     id: filter_align

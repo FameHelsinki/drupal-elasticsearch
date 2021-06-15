@@ -34,6 +34,9 @@ function demo_content_generate() {
         'lat' => $content['lat'],
         'lng' => $content['lng'],
       ],
+      'field_date_founded' => [
+        'value' => $content['founded'],
+      ],
       'field_link' => [
         'uri' => $content['link_en'],
         'title' => $content['title_en'],
