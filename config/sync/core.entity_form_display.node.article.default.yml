@@ -7,12 +7,14 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_link
+    - field.field.node.article.field_location
     - field.field.node.article.field_media
     - field.field.node.article.field_tags
     - image.style.thumbnail
     - node.type.article
   module:
     - comment
+    - geolocation
     - image
     - link
     - media_library
@@ -60,6 +62,12 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_location:
+    weight: 123
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_latlng
     region: content
   field_media:
     type: media_library_widget

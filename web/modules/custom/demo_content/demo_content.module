@@ -2,6 +2,7 @@
 
 use Drupal\node\Entity\Node;
 use Drupal\media\Entity\Media;
+
 ini_set('auto_detect_line_endings', TRUE);
 
 /**
@@ -13,6 +14,7 @@ function demo_content_generate() {
   $rows = array_map('str_getcsv', file($file_path));
   $header = array_shift($rows);
   $csv = [];
+  $lat_lng = '51.47879';
   foreach ($rows as $row) {
     $csv[] = array_combine($header, $row);
   }
@@ -27,6 +29,10 @@ function demo_content_generate() {
       'status' => 1,
       'field_media' => [
         'target_id' => $media_id,
+      ],
+      'field_location' => [
+        'lat' => $content['lat'],
+        'lng' => $content['lng'],
       ],
       'field_link' => [
         'uri' => $content['link_en'],
