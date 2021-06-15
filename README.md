@@ -38,10 +38,10 @@ Tools to help development
 `docker run -p 3030:3030 -d appbaseio/mirage`
 `docker run -p 1358:1358 -d appbaseio/dejavu`
 
-### Generate dummy content
+### Generate demo content
 
-Dummy content can be created with command:
-`ddev exec drush devel-generate-content`
+Demo content can be created with command:
+`ddev exec drush en demo_content -y`
 
 ### Run PHPUnit tests
 

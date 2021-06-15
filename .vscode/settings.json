@@ -1,0 +1,22 @@
+{
+    "editor.tabSize": 2,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "files.trimTrailingWhitespace": true,
+    "files.associations": {
+        "*.module": "php",
+        "*.engine": "php",
+        "*.inc": "php",
+        "*.profile": "php",
+        "*.theme": "php",
+        "*.make": "php",
+        "*.test": "php",
+        "*.info": "php",
+        "*.install": "php"
+    },
+    "php.suggest.basic": false,
+    "php.validate.run": "onType",
+    "phpcs.standard": "Drupal",
+}

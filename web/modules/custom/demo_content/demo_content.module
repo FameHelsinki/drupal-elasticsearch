@@ -1,0 +1,78 @@
+<?php
+
+use Drupal\node\Entity\Node;
+use Drupal\media\Entity\Media;
+ini_set('auto_detect_line_endings', TRUE);
+
+/**
+ * Function to generate content.
+ */
+function demo_content_generate() {
+  $module_handler = \Drupal::service('module_handler');
+  $file_path = $module_handler->getModule('demo_content')->getPath() . '/data.csv';
+  $rows = array_map('str_getcsv', file($file_path));
+  $header = array_shift($rows);
+  $csv = [];
+  foreach ($rows as $row) {
+    $csv[] = array_combine($header, $row);
+  }
+  foreach ($csv as $content) {
+    $media_id = demo_content_generate_image($content['image_url'], $content['title_en']);
+    $node = Node::create([
+      'type' => 'article',
+      'title' => $content['title_en'],
+      'langcode' => 'en',
+      'uid' => 1,
+      'promoted' => 1,
+      'status' => 1,
+      'field_media' => [
+        'target_id' => $media_id,
+      ],
+      'field_link' => [
+        'uri' => $content['link_en'],
+        'title' => $content['title_en'],
+        'options' => [
+          'attributes' => [
+            'target' => '_blank',
+          ],
+        ],
+      ],
+      'body' => [
+        'summary' => '',
+        'value' => $content['body_en'],
+        'format' => 'full_html',
+      ],
+    ]);
+    $node->save();
+    // Add translation if provided.
+    if ($content['title_de']) {
+      $node_de = $node->addTranslation('de');
+      $node_de->title = $content['title_de'];
+      $node_de->body->value = $content['body_de'];
+      $node_de->body->format = 'full_html';
+      $node_de->set('field_link', [
+        'uri' => $content['link_de'],
+        'title' => $content['title_de'],
+      ]);
+      $node_de->save();
+    }
+  }
+}
+
+/**
+ * Function to generate content.
+ */
+function demo_content_generate_image(string $url, string $title) {
+  $image = file_get_contents($url);
+  $file = file_save_data($image, 'public://' . $title . '.png');
+  $media_image = Media::create([
+    'bundle' => 'image',
+    'uid' => 1,
+    'field_media_image' => [
+      'target_id' => $file->id(),
+      'alt' => t('Placeholder image'),
+    ],
+  ]);
+  $media_image->setName($title)->setPublished(TRUE)->save();
+  return $media_image->id();
+}
