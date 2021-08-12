@@ -38,6 +38,9 @@ Tools to help development
 `docker run -p 3030:3030 -d appbaseio/mirage`
 `docker run -p 1358:1358 -d appbaseio/dejavu`
 
+or use Kibana
+http://drupal-elasticsearch.ddev.site:5601/app/dev_tools#/console
+
 ### Generate demo content
 
 Demo content can be created with command:

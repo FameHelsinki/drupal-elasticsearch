@@ -3,8 +3,8 @@ services:
   elasticsearch:
     container_name: ddev-${DDEV_SITENAME}-elasticsearch
     hostname: ${DDEV_SITENAME}-elasticsearch
-    image: elasticsearch:7.10.1
-    ports:
+    image: elasticsearch:${ELASTICSEARCH_VERSION}
+    expose:
       - "9200"
       - "9300"
     environment:
