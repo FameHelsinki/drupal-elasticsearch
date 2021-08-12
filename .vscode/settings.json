@@ -18,5 +18,6 @@
     },
     "php.suggest.basic": false,
     "php.validate.run": "onType",
-    "phpcs.standard": "Drupal",
+    "phpcs.enable": true,
+    "phpcs.standard": "Drupal,DrupalPractice"
 }
