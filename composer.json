@@ -11,7 +11,14 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://packages.drupal.org/8"
+            "url": "https://packages.drupal.org/8",
+            "exclude": [
+              "drupal/elasticsearch_connector"
+            ]
+        },
+        {
+          "type": "git",
+          "url": "git@git.drupal.org:project/elasticsearch_connector.git"
         }
     ],
     "require": {
@@ -22,9 +29,10 @@
         "drupal/core-project-message": "^9.2",
         "drupal/core-recommended": "^9.2",
         "drupal/devel": "^4.1.1",
-        "drupal/elasticsearch_connector": "7.0.0-alpha3",
+        "drupal/elasticsearch_connector": "dev-elasticsearch_connector-3186932/3186932-use-ruflinelastica-instead",
         "drupal/geolocation": "^3.7",
         "drupal/search_api": "^1.19",
+        "drupal/search_api_db": "^1.20",
         "drupal/search_api_location": "^1.0",
         "drupal/search_api_solr": "^4.1",
         "drupal/token": "^1.9",
@@ -46,13 +54,6 @@
     "extra": {
         "composer-exit-on-patch-failure": true,
         "enable-patching": true,
-        "patches": {
-          "drupal/elasticsearch_connector": {
-            "3189051 - Handle pre-epoch dates": "https://www.drupal.org/files/issues/2021-06-25/3189051-pre-epoch-dates-10.patch",
-            "3116153 - Add support for geofield mapping": "https://www.drupal.org/files/issues/2020-11-17/elasticsearch_connector-support_geofield-3116153-3.patch",
-            "3153850 - getCluster error in getIndexName": "https://git.drupalcode.org/project/elasticsearch_connector/-/merge_requests/4.diff"
-          }
-        },
         "patchLevel": {
           "drupal/core": "-p2"
         },
