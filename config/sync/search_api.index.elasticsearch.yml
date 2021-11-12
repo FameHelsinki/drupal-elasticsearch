@@ -23,14 +23,6 @@ field_settings:
     dependencies:
       module:
         - node
-  field_date_founded_full_date:
-    label: 'Date founded'
-    datasource_id: 'entity:node'
-    property_path: field_date_founded
-    type: full_date
-    dependencies:
-      config:
-        - field.storage.node.field_date_founded
   field_location:
     label: Location
     datasource_id: 'entity:node'
