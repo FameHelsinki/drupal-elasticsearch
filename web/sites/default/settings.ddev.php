@@ -4,6 +4,7 @@
  * @file
  * DDEV generated file, with customization for config_sync_directory.
  */
+$settings['container_yamls'][] = $app_root . '/' . $site_path . '/development.services.yml';
 
 $host = "db";
 $port = 3306;
@@ -45,3 +46,5 @@ if (defined('CONFIG_SYNC_DIRECTORY') && empty($config_directories[CONFIG_SYNC_DI
 elseif (empty($settings['config_sync_directory'])) {
   $settings['config_sync_directory'] = '../config/sync';
 }
+// Log messages on screen.
+$config['system.logging']['error_level'] = 'verbose';
