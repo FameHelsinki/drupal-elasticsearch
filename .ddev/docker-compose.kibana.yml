@@ -3,7 +3,9 @@ services:
   kibana:
     container_name: ddev-${DDEV_PROJECT}-kibana
     hostname: ${DDEV_PROJECT}-kibana
-    image: docker.elastic.co/kibana/kibana:${ELASTICSEARCH_VERSION}
+    # Support for .env files has been dropped, @see https://github.com/drud/ddev/discussions/2940
+    #image: docker.elastic.co/kibana/kibana:${ELASTICSEARCH_VERSION}
+    image: docker.elastic.co/kibana/kibana:7.14.2
     restart: "no"
     expose:
       - '5601'

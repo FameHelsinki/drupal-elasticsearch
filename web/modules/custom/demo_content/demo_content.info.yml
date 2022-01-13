@@ -4,3 +4,6 @@ description: 'Generate demo content for testing'
 package: 'Custom'
 core_version_requirement: ^8 || ^9
 version: '8.x-1.0'
+dependencies:
+  - drupal:system
+  - drupal:media

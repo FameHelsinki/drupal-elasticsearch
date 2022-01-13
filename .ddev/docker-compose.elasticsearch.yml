@@ -3,7 +3,9 @@ services:
   elasticsearch:
     container_name: ddev-${DDEV_SITENAME}-elasticsearch
     hostname: ${DDEV_SITENAME}-elasticsearch
-    image: elasticsearch:${ELASTICSEARCH_VERSION}
+    # Support for .env files has been dropped, @see https://github.com/drud/ddev/discussions/2940
+    #image: elasticsearch:${ELASTICSEARCH_VERSION}
+    image: elasticsearch:7.14.2
     expose:
       - "9200"
       - "9300"
