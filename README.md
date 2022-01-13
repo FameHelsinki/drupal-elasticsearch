@@ -3,13 +3,11 @@
 For local development use [DDEV](https://github.com/drud/ddev)
 
 Requirements on local machine:
-- PHP 7.3 (Make sure have same version `php --version`, otherwise `composer install` might fail)
-- Composer 2.x
 - Docker
 - mkcert [Installation quite](https://ddev.readthedocs.io/en/stable/#installationupgrade-script-linux-and-macos)
 
 ```sh
-composer install
+ddev composer install
 ddev start
 ```
 
