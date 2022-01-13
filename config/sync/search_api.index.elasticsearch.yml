@@ -2,14 +2,13 @@ uuid: 73666bff-d5d4-4f89-877e-1fcf791a1371
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.node.field_location
+    - search_api.server.elasticsearch_server
   module:
     - node
     - search_api_location
     - search_api
-  config:
-    - field.storage.node.field_date_founded
-    - field.storage.node.field_location
-    - search_api.server.elasticsearch_server
 id: elasticsearch
 name: elasticsearch
 description: ''
@@ -23,14 +22,6 @@ field_settings:
     dependencies:
       module:
         - node
-  field_date_founded_full_date:
-    label: 'Date founded'
-    datasource_id: 'entity:node'
-    property_path: field_date_founded
-    type: full_date
-    dependencies:
-      config:
-        - field.storage.node.field_date_founded
   field_location:
     label: Location
     datasource_id: 'entity:node'
@@ -64,6 +55,7 @@ tracker_settings:
   default:
     indexing_order: fifo
 options:
-  index_directly: true
   cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
 server: elasticsearch_server
