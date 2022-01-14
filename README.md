@@ -46,7 +46,10 @@ Demo content can be created with command:
 
 ### Run PHPUnit tests
 
-`ddev exec phpunit -c core modules/contrib/elasticsearch_connector`
+`ddev exec phpunit -c web/core web/modules/contrib/elasticsearch_connector`
+
+Run a single test with sqlite.
+`ddev . -- php web/core/scripts/run-tests.sh --verbose --sqlite /tmp/test.sqlite --dburl sqlite://localhost//tmp/test.sqlite --class "'Drupal\Tests\elasticsearch_connector\Unit\ElasticSearch\Parameters\Factory\MappingFactoryTest'"`
 
 ### SOLR
 
