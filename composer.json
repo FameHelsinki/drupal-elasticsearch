@@ -28,7 +28,7 @@
         "drupal/search_api_location": "^1.0",
         "drupal/search_api_solr": "^4.2.6",
         "drupal/token": "^1.10",
-        "drush/drush": "^10"
+        "drush/drush": "^11"
     },
     "conflict": {
         "drupal/drupal": "*"
