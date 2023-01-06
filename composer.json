@@ -25,10 +25,11 @@
         "drupal/elasticsearch_connector": "^7",
         "drupal/geolocation": "^3.11",
         "drupal/search_api": "^1.28",
-        "drupal/search_api_location": "^1.0",
+        "drupal/search_api_location": "^1.0-dev",
         "drupal/search_api_solr": "^4.2.10",
         "drupal/token": "^1.10",
-        "drush/drush": "^11"
+        "drush/drush": "^11",
+        "itamair/geophp": "^1.3"
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
@@ -64,6 +65,10 @@
         "enable-patching": true,
         "patches": {
           "drupal/elasticsearch_connector": {
+            "3116153 - Add support for geofield mapping": "https://www.drupal.org/files/issues/2020-11-17/elasticsearch_connector-support_geofield-3116153-3.patch"
+          },
+          "drupal/search_api_location": {
+            "3327503 - Fix composer.json - geophp should be a normal dependency, remove itamair/geophp - once MR is merged.": "https://git.drupalcode.org/project/search_api_location/-/merge_requests/7.diff"
           }
         },
         "patchLevel": {
