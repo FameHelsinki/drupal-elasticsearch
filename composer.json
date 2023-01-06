@@ -1,6 +1,6 @@
 {
-    "name": "drupal/recommended-project",
-    "description": "Project template for Drupal 9 projects with a relocated document root",
+    "name": "famehelsinki/elastic",
+    "description": "Elasticsearch local development template",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "homepage": "https://www.drupal.org/project/drupal",
@@ -17,18 +17,27 @@
     "require": {
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
-        "drupal/admin_toolbar": "^3.0.3",
-        "drupal/core-composer-scaffold": "^9.4",
-        "drupal/core-project-message": "^9.4",
-        "drupal/core-recommended": "^9.4",
-        "drupal/devel": "^4.1.3",
-        "drupal/elasticsearch_connector": "8.0.x-dev",
-        "drupal/geolocation": "^3.7",
-        "drupal/search_api": "^1.22",
-        "drupal/search_api_location": "^1.0",
-        "drupal/search_api_solr": "^4.2.6",
+        "drupal/admin_toolbar": "^3.3.0",
+        "drupal/core-composer-scaffold": "^10",
+        "drupal/core-project-message": "^10",
+        "drupal/core-recommended": "^10",
+        "drupal/devel": "^5",
+        "drupal/elasticsearch_connector": "^7",
+        "drupal/geolocation": "^3.11",
+        "drupal/search_api": "^1.28",
+        "drupal/search_api_location": "^1.0-dev",
+        "drupal/search_api_solr": "^4.2.10",
         "drupal/token": "^1.10",
-        "drush/drush": "^11"
+        "drush/drush": "^11",
+        "itamair/geophp": "^1.3"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+        "drupal/core-dev": "^10",
+        "drupal/coder": "~8.3.13",
+        "mglaman/drupal-check": "^1.2",
+        "mglaman/phpstan-drupal": "^1.1",
+        "phpspec/prophecy-phpunit": "^2"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -56,8 +65,10 @@
         "enable-patching": true,
         "patches": {
           "drupal/elasticsearch_connector": {
-            "3189051 - Handle pre-epoch dates": "https://www.drupal.org/files/issues/2021-06-25/3189051-pre-epoch-dates-10.patch",
-            "3116153 - Add support for geofield mapping": "https://www.drupal.org/files/issues/2022-01-13/3116153-5.patch"
+            "3116153 - Add support for geofield mapping": "https://www.drupal.org/files/issues/2020-11-17/elasticsearch_connector-support_geofield-3116153-3.patch"
+          },
+          "drupal/search_api_location": {
+            "3327503 - Fix composer.json - geophp should be a normal dependency, remove itamair/geophp - once MR is merged.": "https://git.drupalcode.org/project/search_api_location/-/merge_requests/7.diff"
           }
         },
         "patchLevel": {
@@ -111,13 +122,5 @@
                 "type:drupal-custom-theme"
             ]
         }
-    },
-    "require-dev": {
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
-        "drupal/core-dev": "^9.4",
-        "drupal/coder": "~8.3.13",
-        "mglaman/drupal-check": "^1.2",
-        "mglaman/phpstan-drupal": "^1.1",
-        "phpspec/prophecy-phpunit": "^2"
     }
 }
