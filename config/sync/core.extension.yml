@@ -21,10 +21,14 @@ module:
   geolocation: 0
   hal: 0
   image: 0
+  jquery_ui: 0
+  jquery_ui_autocomplete: 0
+  jquery_ui_menu: 0
   language: 0
   link: 0
   media: 0
   media_library: 0
+  mysql: 0
   node: 0
   page_cache: 0
   path: 0
