@@ -18,7 +18,7 @@ Now you should have Elasticsearch and Drupal ready to start.
 
 Import site, Search API and Elasticsearch configurations by running Drush command:
 ```
-ddev exec drush @es site-install --existing-config --account-pass=123 -y
+ddev drush @es site-install --existing-config --account-pass=123 -y
 ```
 
 Then login at https://drupal-elasticsearch.ddev.site with username `admin` and password `123`
@@ -42,7 +42,7 @@ http://drupal-elasticsearch.ddev.site:5601/app/dev_tools#/console
 ### Generate demo content
 
 Demo content can be created with command:
-`ddev exec drush en demo_content -y`
+`ddev drush en demo_content -y`
 
 ### Run PHPUnit tests
 
@@ -56,7 +56,7 @@ Run a single test with sqlite.
 Install site with Solr.
 
 ```
-ddev exec drush @solr site-install --existing-config --account-pass=123 -y --sites-subdir=solr
+ddev drush @solr site-install --existing-config --account-pass=123 -y --sites-subdir=solr
 ```
 
 Adding Solr server on Drupal Search API UI is not currently working.
