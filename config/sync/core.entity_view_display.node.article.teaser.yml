@@ -37,6 +37,8 @@ content:
     settings:
       image_link: content
       image_style: medium
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: -1
     region: content
@@ -54,7 +56,6 @@ content:
 hidden:
   comment: true
   field_date_founded: true
-  field_image: true
   field_link: true
   field_location: true
   field_media: true
