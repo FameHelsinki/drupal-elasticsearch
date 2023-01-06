@@ -4,8 +4,6 @@ use Drupal\node\Entity\Node;
 use Drupal\media\Entity\Media;
 use Drupal\Core\File\FileSystemInterface;
 
-ini_set('auto_detect_line_endings', TRUE);
-
 /**
  * Function to generate content.
  */
