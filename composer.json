@@ -28,9 +28,7 @@
         "drupal/search_api_location": "^1.0",
         "drupal/search_api_solr": "^4.2.10",
         "drupal/token": "^1.10",
-        "drush/drush": "^11",
-        "makinacorpus/php-lucene": "^1.0.2",
-        "nodespark/des-connector": "7.x-dev"
+        "drush/drush": "^11"
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
