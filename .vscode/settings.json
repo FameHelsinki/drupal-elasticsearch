@@ -10,14 +10,23 @@
         "*.engine": "php",
         "*.inc": "php",
         "*.profile": "php",
+        "*.install": "php",
         "*.theme": "php",
         "*.make": "php",
+        "*.tpl.php": "php",
         "*.test": "php",
         "*.info": "php",
         "*.install": "php"
     },
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "html.format.enable": true,
+    "html.format.wrapLineLength": 80,
+    "telemetry.enableTelemetry": false,
     "php.suggest.basic": false,
     "php.validate.run": "onType",
     "phpcs.enable": true,
     "phpcs.standard": "Drupal,DrupalPractice"
+    "phpCodeSniffer.standard": "Custom",
+    "phpCodeSniffer.standardCustom": "Drupal,DrupalPractice"
 }

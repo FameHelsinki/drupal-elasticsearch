@@ -17,26 +17,30 @@
     "require": {
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
-        "drupal/admin_toolbar": "^3.3.0",
-        "drupal/core-composer-scaffold": "^10",
-        "drupal/core-project-message": "^10",
-        "drupal/core-recommended": "^10",
-        "drupal/devel": "^5",
-        "drupal/elasticsearch_connector": "^7",
-        "drupal/geolocation": "^3.11",
-        "drupal/search_api": "^1.28",
-        "drupal/search_api_location": "^1.0-dev",
-        "drupal/search_api_solr": "^4.2.10",
-        "drupal/token": "^1.10",
-        "drush/drush": "^11",
-        "itamair/geophp": "^1.3"
+        "drupal/admin_toolbar": "^3.5",
+        "drupal/config_ignore": "^3.3",
+        "drupal/config_split": "^2.0",
+        "drupal/core-composer-scaffold": "^11",
+        "drupal/core-project-message": "^11",
+        "drupal/core-recommended": "^11",
+        "drupal/geofield": "^1.60",
+        "drupal/pathauto": "^1.13",
+        "drupal/search_api": "^1.35",
+        "drupal/token": "^1.15",
+        "drush/drush": "^13",
+        "elasticsearch/elasticsearch": "^8",
+        "makinacorpus/php-lucene": "^1.2",
+        "matthiasnoback/phpunit-asynchronicity": "^3.0",
+        "mglaman/composer-drupal-lenient": "^1.0",
+        "opensearch-project/opensearch-php": "^2.2"
     },
     "require-dev": {
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
-        "drupal/core-dev": "^10",
-        "drupal/coder": "~8.3.13",
-        "mglaman/drupal-check": "^1.2",
-        "mglaman/phpstan-drupal": "^1.1",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+        "deployer/deployer": "^7",
+        "drupal/coder": "~8.3.12",
+        "drupal/core-dev": "^11",
+        "drupal/devel": "^5.0",
+        "mglaman/phpstan-drupal": "^1.2.11",
         "phpspec/prophecy-phpunit": "^2"
     },
     "conflict": {
@@ -52,23 +56,30 @@
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
+            "php-http/discovery": true,
+            "mglaman/composer-drupal-lenient": true,
             "phpstan/extension-installer": true
         }
     },
     "scripts": {
+        "test-static-php": [
+            "bin/phpstan analyse web/modules/custom"
+        ],
         "post-install-cmd": [
             "cp dist.phpunit.xml web/core/phpunit.xml"
+        ],
+        "test-coding-standards": [
+            "bin/phpcs --colors --standard=Drupal --extensions=php,module --ignore='*.css,*.md' ./web/modules/custom --report=summary",
+            "bin/phpcs --colors --standard=Drupal --extensions=php,theme --ignore='*.css,*.md,node_modules/*' ./web/themes/custom --report=summary"
         ]
     },
     "extra": {
         "composer-exit-on-patch-failure": true,
         "enable-patching": true,
         "patches": {
-          "drupal/elasticsearch_connector": {
-            "3116153 - Add support for geofield mapping": "https://www.drupal.org/files/issues/2020-11-17/elasticsearch_connector-support_geofield-3116153-3.patch"
-          },
-          "drupal/search_api_location": {
-            "3327503 - Fix composer.json - geophp should be a normal dependency, remove itamair/geophp - once MR is merged.": "https://git.drupalcode.org/project/search_api_location/-/merge_requests/7.diff"
+          "drupal/core": {
+            "2718657 - LanguageNegotiator::updateConfiguration() is passed a NULL, when config-import on first time": "https://www.drupal.org/files/issues/2020-09-21/language-2718657-30.patch",
+            "3002532 - Call to a member function set Weight() on null, when adding language": "https://www.drupal.org/files/issues/2019-11-19/drupal.8.8.x-3002532-20.patch"
           }
         },
         "patchLevel": {
@@ -121,6 +132,9 @@
             "web/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ]
+        },
+        "drupal-lenient": {
+            "allowed-list": ["drupal/bigint", "drupal/image_derivative_token", "drupal/media_field_formatters"]
         }
     }
 }

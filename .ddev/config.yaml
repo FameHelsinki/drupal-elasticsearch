@@ -1,7 +1,7 @@
 name: drupal-elasticsearch
-type: drupal9
+type: drupal
 docroot: web
-php_version: "8.1"
+php_version: "8.3"
 webserver_type: nginx-fpm
 router_http_port: "80"
 router_https_port: "443"
@@ -9,7 +9,8 @@ xdebug_enabled: false
 additional_hostnames:
   - drupal-elasticsearch-solr
 additional_fqdns: []
-mariadb_version: "10.3"
+mariadb_version: "10.6"
+mutagen_enabled: false
 provider: default
 use_dns_when_possible: true
 

@@ -1,11 +1,11 @@
-version: '3.6'
 services:
   kibana:
     container_name: ddev-${DDEV_PROJECT}-kibana
     hostname: ${DDEV_PROJECT}-kibana
     # Support for .env files has been dropped, @see https://github.com/drud/ddev/discussions/2940
     #image: docker.elastic.co/kibana/kibana:${ELASTICSEARCH_VERSION}
-    image: docker.elastic.co/kibana/kibana:7.14.2
+    #image: docker.elastic.co/kibana/kibana:7.14.2
+    image: docker.elastic.co/kibana/kibana:8.12.2
     restart: "no"
     expose:
       - '5601'
